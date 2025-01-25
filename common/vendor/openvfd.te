@@ -1,0 +1,17 @@
+type openvfd, domain;
+type openvfd_exec, exec_type, vendor_file_type, file_type;
+
+# Domain transition
+init_daemon_domain(openvfd)
+
+# Device node rules
+type openvfd_device, dev_type;
+allow openvfd openvfd_device:chr_file { read write open ioctl };
+
+# SysFS rules
+type openvfd_sysfs, sysfs_type, fs_type;
+allow openvfd sysfs:dir { search };
+allow openvfd openvfd_sysfs:file { read write open };
+
+# Init permissions
+allow init openvfd_exec:file { execute open read getattr };
