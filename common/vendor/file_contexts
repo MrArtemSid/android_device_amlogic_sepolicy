@@ -226,6 +226,11 @@
 /sys/class/leds/openvfd/.* u:object_r:openvfd_sysfs:s0
 /vendor/bin/OpenVFDService u:object_r:openvfd_exec:s0
 
+# Remote controller
+/dev/amremote u:object_r:remotecfg_device:s0
+/sys/devices/virtual/remote/amremote/.* u:object_r:remotecfg_sysfs:s0
+/vendor/bin/remotecfg u:object_r:remotecfg_exec:s0
+
 # Video
 /dev/amvideo      u:object_r:vendor_video_device:s0
 /dev/amvideo_poll u:object_r:video_device:s0
