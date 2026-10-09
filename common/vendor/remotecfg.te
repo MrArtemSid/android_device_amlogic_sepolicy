@@ -6,6 +6,8 @@ init_daemon_domain(remotecfg)
 r_dir_file(remotecfg, vendor_remotecfg_data_file)
 
 allow remotecfg input_device:chr_file { read write open ioctl };
+# /dev/amremote is a symlink to amremote0 with the 5.15 IR driver
+allow remotecfg input_device:lnk_file read;
 
 allow remotecfg sysfs_remotecfg:dir search;
 allow remotecfg sysfs_remotecfg:file rw_file_perms;
