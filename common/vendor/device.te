@@ -19,6 +19,7 @@ type logo_block_device, dev_type;
 type media_device, dev_type;
 type mediaproxy_device, dev_type;
 type mediasync_device, dev_type;
+type openvfd_device, dev_type;
 type param_block_device, dev_type;
 type ptsserver_device, dev_type;
 type reserved_block_device, dev_type;

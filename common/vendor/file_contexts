@@ -232,6 +232,10 @@
 # OEM Lock
 /vendor/bin/hw/android\.hardware\.oemlock@1\.0-service\.droidlogic       u:object_r:hal_oemlock_default_exec:s0
 
+# OpenVFD
+/dev/openvfd                  u:object_r:openvfd_device:s0
+/vendor/bin/OpenVFDService    u:object_r:openvfd_exec:s0
+
 # Param
 /odm_ext(/.*)?               u:object_r:param_tv_file:s0
 /param(/.*)?                 u:object_r:param_tv_file:s0
